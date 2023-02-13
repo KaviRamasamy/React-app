@@ -15,5 +15,5 @@ db.once('open', () => console.log('Database Connected...'));
 app.use(cors("*"));
 app.use(express.json());
 app.use(UserRoute);
-
-app.listen(5000, ()=> console.log('Server up and running...'));
+const apiPort= 'https://react-app-index.vercel.app'
+app.listen(apiPort, ()=> console.log('Server up and running...'));
