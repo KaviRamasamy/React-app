@@ -12,9 +12,19 @@ const db = mongoose.connection;
 db.on('error', (error) => console.log(error));
 db.once('open', () => console.log('Database Connected...'));
 
-app.use(cors({origin:"https://react-app-index.vercel.app"}));
-app.use(cors({origin:"https://react-app-index-kaviramasamy.vercel.app"}));
-app.use(cors({origin:"https://react-app-index-git-main-kaviramasamy.vercel.app"}));
+
+const cors = require('cors');    
+const corsOpts = {
+    origin: '*',
+    credentials: true,
+    methods: ['GET','POST','HEAD','PUT','PATCH','DELETE'],
+    allowedHeaders: ['Content-Type'],
+    exposedHeaders: ['Content-Type']
+};
+app.use(cors(corsOpts));
+// app.use(cors({origin:"https://react-app-index.vercel.app"}));
+// app.use(cors({origin:"https://react-app-index-kaviramasamy.vercel.app"}));
+// app.use(cors({origin:"https://react-app-index-git-main-kaviramasamy.vercel.app"}));
 app.use(express.json());
 app.use(UserRoute);
 const apiPort= 'https://react-app-nine-topaz.vercel.app'
