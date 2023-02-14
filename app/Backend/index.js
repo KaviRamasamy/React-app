@@ -24,5 +24,5 @@ const corsOpts = {
 app.use(cors(corsOpts));
 app.use(express.json());
 app.use(UserRoute);
-const apiPort= 'https://react-app-peach-kappa.vercel.app'
-app.listen(apiPort, ()=> console.log('Server up and running...'));
+// const apiPort= 'https://react-app-peach-kappa.vercel.app'
+app.listen(5000, ()=> console.log('Server up and running...'));
