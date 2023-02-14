@@ -13,7 +13,7 @@ db.on('error', (error) => console.log("error-logs: ", error));
 db.once('open', () => console.log('Database Connected...'));
 
 
-const cors = require('cors');    
+let cors = require('cors');    
 const corsOpts = {
     origin: ['https://react-app-pi-seven.vercel.app'],
     methods: ['GET','POST','HEAD','PUT','PATCH','DELETE'],
