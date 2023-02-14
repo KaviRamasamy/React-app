@@ -21,7 +21,7 @@ const UserList = () => {
 
   const deleteUser = async (id) => {
     try {
-      await axios.delete(`https://react-app-peach-kappa.vercel.app/users/${id}`);
+      await axios.delete(`https://react-app-backend-rosy.vercel.app/users/${id}`);
       getUsers();
     } catch (error) {
       console.log(error);

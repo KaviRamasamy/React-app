@@ -15,7 +15,7 @@ db.once('open', () => console.log('Database Connected...'));
 
 const cors = require('cors');    
 const corsOpts = {
-    origin: '*',
+    origin: ['https://react-app-pi-seven.vercel.app'],
     credentials: true,
     methods: ['GET','POST','HEAD','PUT','PATCH','DELETE'],
     allowedHeaders: ['Content-Type'],
