@@ -14,7 +14,8 @@ const AddUser = () => {
       await axios.post("https://react-app-backend-rosy.vercel.app/users/", {
         name,
         email,
-        gender,
+        gender
+      }, {
         headers: { 
           'Access-Control-Allow-Origin' : '*',
           'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',

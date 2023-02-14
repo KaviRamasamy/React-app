@@ -26,7 +26,9 @@ const EditUser = () => {
       await axios.patch(`https://react-app-backend-rosy.vercel.app/users/${id}`, {
         name,
         email,
-        gender,
+        gender
+      },
+      {
         headers: { 
           'Access-Control-Allow-Origin' : '*',
           'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
