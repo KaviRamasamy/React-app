@@ -22,10 +22,7 @@ const corsOpts = {
     exposedHeaders: ['Content-Type']
 };
 app.use(cors(corsOpts));
-// app.use(cors({origin:"https://react-app-index.vercel.app"}));
-// app.use(cors({origin:"https://react-app-index-kaviramasamy.vercel.app"}));
-// app.use(cors({origin:"https://react-app-index-git-main-kaviramasamy.vercel.app"}));
 app.use(express.json());
 app.use(UserRoute);
-const apiPort= 'https://react-app-nine-topaz.vercel.app/'
+const apiPort= 'https://react-app-peach-kappa.vercel.app'
 app.listen(apiPort, ()=> console.log('Server up and running...'));

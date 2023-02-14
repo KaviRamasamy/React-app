@@ -10,13 +10,13 @@ const UserList = () => {
   }, []);
 
   const getUsers = async () => {
-    const response = await axios.get("https://react-app-nine-topaz.vercel.app/users");
+    const response = await axios.get("https://react-app-peach-kappa.vercel.app/users");
     setUser(response.data);
   };
 
   const deleteUser = async (id) => {
     try {
-      await axios.delete(`https://react-app-nine-topaz.vercel.app/users/${id}`);
+      await axios.delete(`https://react-app-peach-kappa.vercel.app/users/${id}`);
       getUsers();
     } catch (error) {
       console.log(error);
