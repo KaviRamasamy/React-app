@@ -13,7 +13,7 @@ const UserList = () => {
     const response = await axios.get("https://react-app-backend-rosy.vercel.app/users", {
       headers: { 
         'Access-Control-Allow-Origin' : '*',
-        'Access-Control-Allow-Methods':('GET','PUT','POST','DELETE','PATCH','OPTIONS'),
+        'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
       }
     });
     setUser(response.data);
