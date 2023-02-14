@@ -11,7 +11,7 @@ const AddUser = () => {
   const saveUser = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("https://react-app-peach-kappa.vercel.app/users", {
+      await axios.post("https://react-app-peach-kappa.vercel.app/users/", {
         name,
         email,
         gender,
