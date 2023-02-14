@@ -9,7 +9,7 @@ mongoose.connect('mongodb+srv://KaviRamasamy:Abcd$1234@react-app.n7g9bo5.mongodb
     useUnifiedTopology: true
 });
 const db = mongoose.connection;
-db.on('error', (error) => console.log("error: ", error));
+db.on('error', (error) => console.log("error-logs: ", error));
 db.once('open', () => console.log('Database Connected...'));
 
 
