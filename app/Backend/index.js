@@ -13,14 +13,15 @@ db.on('error', (error) => console.log("error-logs: ", error));
 db.once('open', () => console.log('Database Connected...'));
 
 
-let cors = require('cors');    
-const corsOpts = {
+const cors = require('cors');    
+/* const corsOpts = {
     origin: ['https://react-app-pi-seven.vercel.app'],
     methods: ['GET','POST','HEAD','PUT','PATCH','DELETE'],
     allowedHeaders: ['Content-Type'],
     exposedHeaders: ['Content-Type']
-};
-app.use(cors(corsOpts));
+}; */
+app.use(cors());
+app.options('*', cors())
 app.use(express.json());
 app.use(UserRoute);
 // const apiPort= 'https://react-app-peach-kappa.vercel.app'
