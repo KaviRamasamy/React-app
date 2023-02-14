@@ -27,6 +27,10 @@ const EditUser = () => {
         name,
         email,
         gender,
+        headers: { 
+          'Access-Control-Allow-Origin' : '*',
+          'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+        }
       });
       navigate("/");
     } catch (error) {

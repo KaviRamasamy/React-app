@@ -10,7 +10,12 @@ const UserList = () => {
   }, []);
 
   const getUsers = async () => {
-    const response = await axios.get("https://react-app-peach-kappa.vercel.app/users/");
+    const response = await axios.get("https://react-app-peach-kappa.vercel.app/users/", {
+      headers: { 
+        'Access-Control-Allow-Origin' : '*',
+        'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+      }
+    });
     setUser(response.data);
   };
 
