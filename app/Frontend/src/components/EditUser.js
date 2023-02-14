@@ -23,7 +23,7 @@ const EditUser = () => {
   const updateUser = async (e) => {
     e.preventDefault();
     try {
-      await axios.patch(`https://react-app-peach-kappa.vercel.app/users/${id}`, {
+      await axios.patch(`https://react-app-backend-rosy.vercel.app/users/${id}`, {
         name,
         email,
         gender,

@@ -11,10 +11,14 @@ const AddUser = () => {
   const saveUser = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("https://react-app-peach-kappa.vercel.app/users/", {
+      await axios.post("https://react-app-backend-rosy.vercel.app/users/", {
         name,
         email,
         gender,
+        headers: { 
+          'Access-Control-Allow-Origin' : '*',
+          'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+        }
       });
       navigate("/");
     } catch (error) {
