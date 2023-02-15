@@ -12,17 +12,21 @@ const db = mongoose.connection;
 db.on('error', (error) => console.log("error-logs: ", error));
 db.once('open', () => console.log('Database Connected...'));
 
+app.use(cors());
+app.use(express.json());
+app.use(UserRoute);
 
-const cors = require('cors');    
+app.listen(5000, ()=> console.log('Server up and running...'));
+// const cors = require('cors');    
 /* const corsOpts = {
     origin: ['https://react-app-pi-seven.vercel.app'],
     methods: ['GET','POST','HEAD','PUT','PATCH','DELETE'],
     allowedHeaders: ['Content-Type'],
     exposedHeaders: ['Content-Type']
 }; */
-app.use(cors());
-app.options('*', cors())
-app.use(express.json());
-app.use(UserRoute);
+// app.use(cors());
+// app.options('*', cors())
+// app.use(express.json());
+// app.use(UserRoute);
 // const apiPort= 'https://react-app-peach-kappa.vercel.app'
 //app.listen(5000, ()=> console.log('Server up and running...'));
