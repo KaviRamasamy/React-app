@@ -29,8 +29,9 @@ const UserList = () => {
   };
 
   return (
-    <div className="columns mt-5">
-      <div className="column is-half">
+    <div>
+      <div>
+        <h2>Simple crud operations</h2>
         <Link to="add" className="button is-success">
           Add New
         </Link>
