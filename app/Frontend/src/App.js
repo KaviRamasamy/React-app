@@ -7,6 +7,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="container">
+        <h2>Simple crud operations</h2>
         <Routes>
           <Route path="/" element={<UserList />} />
           <Route path="add" element={<AddUser />} />
