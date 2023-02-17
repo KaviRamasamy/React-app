@@ -29,9 +29,8 @@ const UserList = () => {
   };
 
   return (
-    <div>
+    <div className="mainContainer">
       <div>
-        <h2>Simple crud operations</h2>
         <Link to="add" className="button is-success">
           Add New
         </Link>
